@@ -1,0 +1,82 @@
+html {
+  background: #018ded url(http://unsplash.it/1500/1000?image=881&blur=5);
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  font-weight: bolder;
+  text-align: center;
+  font-size: 10px;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tittle {
+  color: white;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: lighter;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em darkblue;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  /* the hands rotate from the center border */
+  transform: rotate(90deg);
+  /* The hands start at 12 o'clock (vertically) */
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.5, 0.58, 1);
+  /* to mimic the move of the clock hands */
+}
+
+.footer {
+  height: 85px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  text-decoration: none;
+  cursor: hand;
+}
